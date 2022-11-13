@@ -1,11 +1,12 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://www.youtube.com/watch?v=ot94H3-d5d8)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=410)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
 Minimal PyQt app with icon and title, built from/as a class
 
 Concepts introduced:
+  - Converting the app to object oriented
   - Extending the QWidget class
   - Setting the window icon and title
   - Using the QIcon class
