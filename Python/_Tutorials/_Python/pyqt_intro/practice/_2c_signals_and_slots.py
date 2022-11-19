@@ -83,6 +83,8 @@ class Window(QWidget):
       btn.setStyleSheet('background-color:red')
       btn.setIcon(QIcon('button_icon.png'))
       btn.clicked.connect(self.clicked_button)
+      btn.pressed.connect(self.pressed_button)
+      btn.released.connect(self.released_button)
 
       # Create a text label and set attributes, including font
       self.label = QLabel('My Label', self)
@@ -94,6 +96,13 @@ class Window(QWidget):
     def clicked_button(self):
       self.label.setText("Text has changed")
       self.label.setStyleSheet('background-color:red')
+
+    def pressed_button(self):
+      print("The button was pressed")
+
+    def released_button(self):
+      print("The button was released")
+
 
 # *** Main ***
 if __name__ == '__main__':
