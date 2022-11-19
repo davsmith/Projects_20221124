@@ -26,6 +26,10 @@ class Window(QWidget):
         self.table.setItem(1, 1, QTableWidgetItem("Forogh"))
         self.table.setItem(1, 2, QTableWidgetItem("parwiz@gmail.com"))
 
+        self.table.setItem(2, 0, QTableWidgetItem("John"))
+        self.table.setItem(2, 1, QTableWidgetItem("Doe"))
+        self.table.setItem(2, 2, QTableWidgetItem("john_doe@gmail.com"))
+
         self.vbox.addWidget(self.table)
         self.setLayout(self.vbox)
 
