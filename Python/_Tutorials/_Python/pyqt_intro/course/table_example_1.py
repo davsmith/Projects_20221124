@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QTableWidget,QTableWidgetItem
-from PyQt6.QtGui import QIcon
+from PyQt6.QtGui import QIcon, QFont
 
 class Window(QWidget):
 
@@ -17,6 +17,8 @@ class Window(QWidget):
         tableWidget = QTableWidget(self)
         tableWidget.setColumnCount(3)
         tableWidget.setRowCount(3)
+        tableWidget.setStyleSheet('background-color:yellow')
+        tableWidget.setFont(QFont('Times New Roman', 14))
 
         tableWidget.setItem(0, 0, QTableWidgetItem("FName"))
         tableWidget.setItem(0, 1, QTableWidgetItem("LName"))
