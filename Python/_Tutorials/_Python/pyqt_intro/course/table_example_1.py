@@ -11,27 +11,27 @@ class Window(QWidget):
         self.setWindowIcon(QIcon("app_icon.png"))
         self.setGeometry(500, 200, 500, 400)
 
-        self.vbox = QVBoxLayout()
+        vbox = QVBoxLayout()
 
         # add table 
-        self.table = QTableWidget(self)
-        self.table.setColumnCount(3)
-        self.table.setRowCount(3)
+        tableWidget = QTableWidget(self)
+        tableWidget.setColumnCount(3)
+        tableWidget.setRowCount(3)
 
-        self.table.setItem(0, 0, QTableWidgetItem("FName"))
-        self.table.setItem(0, 1, QTableWidgetItem("LName"))
-        self.table.setItem(0, 2, QTableWidgetItem("Email"))
+        tableWidget.setItem(0, 0, QTableWidgetItem("FName"))
+        tableWidget.setItem(0, 1, QTableWidgetItem("LName"))
+        tableWidget.setItem(0, 2, QTableWidgetItem("Email"))
 
-        self.table.setItem(1, 0, QTableWidgetItem("Parwiz"))
-        self.table.setItem(1, 1, QTableWidgetItem("Forogh"))
-        self.table.setItem(1, 2, QTableWidgetItem("parwiz@gmail.com"))
+        tableWidget.setItem(1, 0, QTableWidgetItem("Parwiz"))
+        tableWidget.setItem(1, 1, QTableWidgetItem("Forogh"))
+        tableWidget.setItem(1, 2, QTableWidgetItem("parwiz@gmail.com"))
 
-        self.table.setItem(2, 0, QTableWidgetItem("John"))
-        self.table.setItem(2, 1, QTableWidgetItem("Doe"))
-        self.table.setItem(2, 2, QTableWidgetItem("john_doe@gmail.com"))
+        tableWidget.setItem(2, 0, QTableWidgetItem("John"))
+        tableWidget.setItem(2, 1, QTableWidgetItem("Doe"))
+        tableWidget.setItem(2, 2, QTableWidgetItem("john_doe@gmail.com"))
 
-        self.vbox.addWidget(self.table)
-        self.setLayout(self.vbox)
+        vbox.addWidget(tableWidget)
+        self.setLayout(vbox)
 
         self.show()
 
