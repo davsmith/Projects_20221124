@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 pyqt6 = "*"
+mysql-connector-python = "*"
 
 [dev-packages]
 pyqt6-tools = "*"
