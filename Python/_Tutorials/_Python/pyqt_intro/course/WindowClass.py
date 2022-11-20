@@ -21,6 +21,7 @@ Created November 12, 2022
 from PyQt6.QtWidgets import QApplication, QWidget
 from PyQt6.QtGui import QIcon
 import sys
+import os
 
 class Window(QWidget):
     """Basic app window class extending the QWidget base class from PyQT.
@@ -51,6 +52,7 @@ class Window(QWidget):
 
       # The icon in the example is 426x480
       self.setWindowIcon(QIcon("app_icon.png"))
+      print(f"cwd: {os.getcwd()}")
 
       # Use setFixedHeight and setFixedWidth to define a non-resizable window
       # self.setFixedHeight(200)
