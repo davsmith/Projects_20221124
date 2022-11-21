@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Output from the Qt Designer
+  PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=1867)
+  Detailed notes: https://tinyurl.com/y5db3c5c
+
+  Related to:
+    - button_label.py
+    - button_gen.py
+
+  Concepts Introduced:
+    - Drag/drop of controls (push button and label)
+    - Changing control attributes via double-click and the Property Editor
+    - Setting text and dimensions for a control
+    - Choosing and setting attributes for a font
+    - Setting control appearance for multiple classes via a style sheet
+    - Setting signals and slots (via code, not in Designer)
+
+-->
+
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
