@@ -19,6 +19,10 @@ Module/Class/Methods:
     QIcon           Loads an image file and provides an instance of a PyQt icon class
         __init__    Receives an image file as an argument (e.g. .png)
 
+    QFont           Loads a font, sets the font size and provides an instance of a PyQt font class
+    CLongestClassAB This show the longest line allowed by Python style conventions (99 characters)
+
+
 Created November 20, 2022
 """
 
@@ -28,28 +32,19 @@ from os.path import join, realpath, dirname
 import sys
 
 class Window(QWidget):
-    """Basic app window class extending the QWidget base class from PyQT.
-
-    Longer class information...
-    Longer class information...
-
-    Attributes:
-      none
+    """Single line summary of the class with a period at the end.
+ 
+    Methods:
+        __init__(self, arg1, arg2)
+        method2()
     """
+
     def __init__(self):
-      """Extends the init function on the QWidget class.
-
-      Sets up the application window, setting up icons, dimensions, etc.
-
-      Args:
-        none
-
-      Returns:
-        none
-
-      Raises:
-        none
-    """
+      """This method multiplies the given two numbers.
+  
+      Input Arguments: a, b must be numbers.
+      Returns: Multiplication of a and b.
+      """
       super().__init__()
 
       script_path = realpath(dirname(__file__))
@@ -59,6 +54,29 @@ class Window(QWidget):
       self.setWindowIcon(app_icon)
       self.setGeometry(500, 300, 400, 300)
       self.setStyleSheet("background-color:blue")
+
+      self.create_widgets()
+
+    def create_widgets(self):
+      """This method multiplies the given two numbers.
+
+      Input Arguments: a, b must be numbers.
+      Returns: Multiplication of a and b.
+      """
+
+      # Create a widget for something, set some attributes
+      widget1 = QWidget("Click Me", self)
+
+      # widget1.move(100,100)
+      widget1.setGeometry(100, 100, 100, 100)
+      widget1.setStyleSheet('background-color:red')
+      widget1.setIcon(QIcon('button_icon.png'))
+
+      # Create a widget for something, set some attributes
+      label = QLabel("My Label", self)
+      label.move(100,200)
+      label.setStyleSheet('color:green')
+      label.setFont(QFont("Times New Roman", 15))
 
 # *** Main ***
 if __name__ == '__main__':
