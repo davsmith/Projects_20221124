@@ -3,6 +3,19 @@
   Output from the Qt Designer
   PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=818)
   Detailed notes: https://tinyurl.com/y5db3c5c
+
+  Related to:
+    - widget_class.py
+    - widget_load_ui.py
+    - widget_gen.py
+
+  Concepts Introduced:
+    - Launching Qt Designer with: qt6-tools designer
+    - Creating a new QWidget app
+    - Setting the background color with a style sheet
+    - Inserting a color from the Edit Style Sheet dialog
+    - Specifying a color with rgb(rrr, ggg, bbb) format
+
 -->
 <ui version="4.0">
  <class>Form</class>

@@ -1,8 +1,7 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=1217)
 Detailed notes: https://tinyurl.com/y5db3c5c
-Relative link: https://youtu.be/ot94H3-d5d8?t=1217
 
 Created by converting the .ui file from Designer into a .py file using
     pyuic6 -x <input file>.ui -o <output file>.py
@@ -30,17 +29,15 @@ Module/Class/Methods:
 Created November 12, 2022
 """
 
-# https://youtu.be/ot94H3-d5d8?t=1217
 from PyQt6 import QtCore, QtGui, QtWidgets
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(400, 300)
         Form.setStyleSheet("QWidget {\n"
-"background-color: rgb(67, 67, 255)\n"
-"}")
+            "background-color: rgb(67, 67, 255)\n"
+        "}")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -48,7 +45,6 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Qt Designer Window"))
-
 
 if __name__ == "__main__":
     import sys
