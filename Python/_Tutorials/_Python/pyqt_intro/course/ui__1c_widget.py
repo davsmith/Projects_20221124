@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'Window.ui'
+# Form implementation generated from reading ui file 'c:\source\Projects\Python\_Tutorials\_Python\pyqt_intro\course\_1c_widget.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.0
 #
@@ -23,13 +23,3 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Qt Designer Window"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec())
