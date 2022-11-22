@@ -9,43 +9,57 @@ Concepts introduced:
   - Using signals and slots to change the text on a label when a button is clicked
   - Storing controls as instance variables for the class
 
+Module/Class/Methods:
+    QApplication    See detailed notes (linked above)
+    QWidget         See detailed notes (linked above)
+
+    QPushButton     Class to instantiate a push button control
+      __init__      Receives the button text and host control
+      clicked       Set the event handler for the click event (using .connect)
+
+    QLabel          Class to instantiate a text control
+      __init__      Receives the label text and host control
+      setText       Sets the text string on the label
+      setStyleSheet Formats the appearance of the label (background-color)
+    
+    QFont           Loads a font, sets the font size and provides an instance of a PyQt font class
+    QIcon           See detailed notes (linked above)
+
+Created November 12, 2022
+
+
 Created November 13, 2022
 """
 
 ' Minimal PyQt6 window with no icon or title, using classes '
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel
 from PyQt6.QtGui import QIcon, QFont
+from os.path import join, realpath, dirname
 import sys
 
 class Window(QWidget):
     """Basic app window class extending the QWidget base class from PyQT.
 
-    Longer class information...
-    Longer class information...
-
-    Attributes:
-      none
+    Methods:
+        __init__(self)
+        create_widgets(self)
     """
+
     def __init__(self):
       """Extends the init function on the QWidget class.
 
       Sets up the application window, setting up icons, dimensions, etc.
-
-      Args:
-        none
-
-      Returns:
-        none
-
-      Raises:
-        none
-    """
+      """
       super().__init__()
 
+      script_path = realpath(dirname(__file__))
+      app_icon = QIcon(join(script_path, "images/app_icon.png"))
+
       # Set window attributes
-      self.setWindowTitle('PyQt6 Signals & Slots')
-      self.setWindowIcon(QIcon('app_icon.png'))
+      self.setWindowTitle("PyQt6 <template>")
+      self.setWindowIcon(app_icon)
       self.setGeometry(500, 300, 400, 300)
+      self.setStyleSheet("background-color:blue")
 
       self.create_widgets()
 
@@ -53,11 +67,10 @@ class Window(QWidget):
       # Create and position a button, and add an icon
       btn = QPushButton("Click Me", self)
 
-      # btn.move(100,100)
       btn.setGeometry(100, 100, 100, 100)
       btn.setStyleSheet('background-color:red')
       btn.setIcon(QIcon('button_icon.png'))
-      btn.clicked.connect(self.clicked_button)
+      btn.clicked.connect(self.on_clicked)
 
       # Create a text label and set attributes, including font
       self.label = QLabel('My Label', self)
@@ -66,7 +79,7 @@ class Window(QWidget):
       self.label.setStyleSheet('color:green')
       self.label.setFont(QFont('Times New Roman', 15))
 
-    def clicked_button(self):
+    def on_clicked(self):
       self.label.setText("Text has changed")
       self.label.setStyleSheet('background-color:red')
 
