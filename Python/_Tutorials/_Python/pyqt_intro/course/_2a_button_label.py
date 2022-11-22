@@ -17,9 +17,12 @@ Module/Class/Methods:
 
     QPushButton     Class to instantiate a push button control
       __init__      Receives the button text and host control
+      setStyleSheet Sets the display attributes for the control based on CSS
+      setGeometry   Sets the dimensions and location of the control
 
     QLabel          Class to instantiate a text control
       __init__      Receives the label text and host control
+      setFont       Sets the font and font size for the control.  Receives a QFont object.
     
     QFont           Loads a font, sets the font size and provides an instance of a PyQt font class
     QIcon           See detailed notes (linked above)

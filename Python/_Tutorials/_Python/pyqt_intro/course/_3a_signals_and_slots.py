@@ -8,6 +8,7 @@ Example implementation of signals and slots (events and handlers)
 Concepts introduced:
   - Using signals and slots to change the text on a label when a button is clicked
   - Storing controls as instance variables for the class
+  - Dave's convention is to name slot functions (callbacks) as on_<event_name> (e.g. on_clicked)
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -56,7 +57,7 @@ class Window(QWidget):
       app_icon = QIcon(join(script_path, "images/app_icon.png"))
 
       # Set window attributes
-      self.setWindowTitle("PyQt6 <template>")
+      self.setWindowTitle("PyQt6 Signals & Slots")
       self.setWindowIcon(app_icon)
       self.setGeometry(500, 300, 400, 300)
       self.setStyleSheet("background-color:blue")

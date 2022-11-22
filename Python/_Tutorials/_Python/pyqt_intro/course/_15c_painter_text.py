@@ -1,3 +1,5 @@
+"""https://youtu.be/ot94H3-d5d8?t=10973"""
+
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QTableWidget,QTableWidgetItem

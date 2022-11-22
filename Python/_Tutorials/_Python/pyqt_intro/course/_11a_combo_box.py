@@ -1,9 +1,9 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=0)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=6468)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
-Demonstrates <something interesting>
+Demonstrates a combobox control using QComboBox
 
 Concepts introduced:
     - Concept 1
