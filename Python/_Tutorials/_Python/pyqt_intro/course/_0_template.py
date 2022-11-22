@@ -26,8 +26,8 @@ Module/Class/Methods:
 Created November 20, 2022
 """
 
-from PyQt6.QtWidgets import QApplication, QWidget
-from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel
+from PyQt6.QtGui import QIcon, QFont
 from os.path import join, realpath, dirname
 import sys
 
