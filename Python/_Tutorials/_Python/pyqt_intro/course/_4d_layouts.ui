@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Output from the Qt Designer
+  PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=2664)
+  Detailed notes: https://tinyurl.com/y5db3c5c
+
+  Related to:
+    - layouts_vbox.py
+    - layouts_hbox.py
+    - layouts_grid.py
+    - layouts_gen.py
+
+  Concepts Introduced:
+    - Using Designer with layout controls
+
+-->
+
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
