@@ -1,8 +1,7 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=410)
 Detailed notes: https://tinyurl.com/y5db3c5c
-Relative link: https://youtu.be/ot94H3-d5d8?t=410
 
 A basic PyQt application built by extending the QWidget class
 Alternative window types are QDialog and QMainWindow
@@ -55,7 +54,7 @@ class Window(QWidget):
       script_path = realpath(dirname(__file__))
       app_icon = QIcon(join(script_path, "images/app_icon.png"))
 
-      self.setWindowTitle("PyQt6 Window")
+      self.setWindowTitle("PyQt6 Window (QWidget)")
       self.setWindowIcon(app_icon)
 
       # Use setFixedHeight and setFixedWidth to define a non-resizable window
