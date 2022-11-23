@@ -8,6 +8,8 @@ Demonstrates drawing shapes using the QPainter class
 Concepts introduced:
     - Drawing rectangles
     - Differences between PyQt5 and PyQt6
+        - The method of using enums changed (e.g. from Qt.SolidLine to Qt.PenStyle.SolidLine)
+    - The paintEvent which occurs when the canvas is repainted (window resize, minimize/restore)
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -18,7 +20,7 @@ Module/Class/Methods:
 
     QPainter        Draws shapes in a window (canvas)
         paintEvent  Callback for 
-    QPainter This show the longest line allowed by Python style conventions (99 characters)
+    QPainter        This show the longest line allowed by Python style conventions (99 characters)
 
 
 Created November 22, 2022
@@ -51,39 +53,20 @@ class Window(QWidget):
       app_icon = QIcon(join(script_path, "images/app_icon.png"))
 
       # Set window attributes
-      self.setWindowTitle("PyQt6 Drawing Shapes QPainter()")
+      self.setWindowTitle("PyQt6 QPainter Rectangle")
       self.setWindowIcon(app_icon)
       self.setGeometry(500, 300, 500, 300)
 
-    #   self.create_widgets()
-
     def paintEvent(self, e):
         painter = QPainter(self)
-        painter.setPen(QPen(Qt.GlobalColor.blue, 5, Qt.PenStyle.DashDotDotLine))
+        # painter.setPen(QPen(Qt.GlobalColor.blue, 5, Qt.PenStyle.DashDotDotLine))
+        painter.setPen(QPen(Qt.GlobalColor.blue, 5, Qt.PenStyle.SolidLine))
+        # painter.setBrush(QBrush(Qt.GlobalColor.green, Qt.BrushStyle.SolidPattern))
+        painter.setBrush(QBrush(Qt.GlobalColor.green, Qt.BrushStyle.DiagCrossPattern))
 
         painter.drawRect(100, 15, 300, 100)
+        print("paintEvent occurred")
 
-
-    def create_widgets(self):
-      """This method multiplies the given two numbers.
-
-      Input Arguments: a, b must be numbers.
-      Returns: Multiplication of a and b.
-      """
-
-      # Create a widget for something, set some attributes
-      widget1 = QWidget("Click Me", self)
-
-      # widget1.move(100,100)
-      widget1.setGeometry(100, 100, 100, 100)
-      widget1.setStyleSheet('background-color:red')
-      widget1.setIcon(QIcon('button_icon.png'))
-
-      # Create a widget for something, set some attributes
-      label = QLabel("My Label", self)
-      label.move(100,200)
-      label.setStyleSheet('color:green')
-      label.setFont(QFont("Times New Roman", 15))
 
 # *** Main ***
 if __name__ == '__main__':
