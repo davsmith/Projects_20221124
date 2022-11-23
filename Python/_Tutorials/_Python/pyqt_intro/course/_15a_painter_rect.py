@@ -3,13 +3,14 @@
 PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=10388)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
-Demonstrates drawing shapes using the QPainter class
+Demonstrates drawing a rectangle using the QPainter class
 
 Concepts introduced:
-    - Drawing rectangles
+    - Drawing rectangles with different fills and border styles
     - Differences between PyQt5 and PyQt6
         - The method of using enums changed (e.g. from Qt.SolidLine to Qt.PenStyle.SolidLine)
     - The paintEvent which occurs when the canvas is repainted (window resize, minimize/restore)
+    - Using enums (colors, brush styles, etc.) defined in the Qt module from PyQt6.QtCore 
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -19,9 +20,8 @@ Module/Class/Methods:
     QFont           See detailed notes (linked above)
 
     QPainter        Draws shapes in a window (canvas)
-        paintEvent  Callback for 
-    QPainter        This show the longest line allowed by Python style conventions (99 characters)
-
+      paintEvent    A method called when the canvas is repainted
+___________________________________________________________________________________________________
 
 Created November 22, 2022
 """
@@ -34,19 +34,15 @@ from os.path import join, realpath, dirname
 import sys
 
 class Window(QWidget):
-    """Single line summary of the class with a period at the end.
+    """The top level window for the application.
  
     Methods:
-        __init__(self, arg1, arg2)
-        method2()
+        __init__(self)
+        paintEvent(self, e)
     """
 
     def __init__(self):
-      """This method multiplies the given two numbers.
-  
-      Input Arguments: a, b must be numbers.
-      Returns: Multiplication of a and b.
-      """
+      """This method sets the window appearance."""
       super().__init__()
 
       script_path = realpath(dirname(__file__))
