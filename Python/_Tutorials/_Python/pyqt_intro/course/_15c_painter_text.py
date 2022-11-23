@@ -1,12 +1,13 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=10808)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=10973)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
-Demonstrates drawing an ellipse using the QPainter class
+Demonstrates drawing text on a canvas using the QPainter class
 
 Concepts introduced:
-    - Drawing text using the drawEllipse method on QPainter
+    - Drawing text using the drawText method on QPainter
+    - Drawing text with HTML formatting using QTextDocument
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -17,7 +18,12 @@ Module/Class/Methods:
     QPen            Object to define colors, width, linestyle, etc. for borders
     QBrush          Object to define colors, width, fill color, etc. for fills
 
-Created November 20, 2022
+    QTextDocument
+      setTextWidth  Sets the window width in which the text is drawn
+      setHtml       Sets the contents and HTML formatting for the string
+      drawContents  Renders the HTML string on the canvas
+
+Created November 23, 2022
 """
 
 from PyQt6.QtWidgets import QApplication, QWidget
