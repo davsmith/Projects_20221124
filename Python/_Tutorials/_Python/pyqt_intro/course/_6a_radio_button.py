@@ -1,13 +1,14 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=0)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=3256)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
 Demonstrates radio button controls (QRadioButton)
 
 Concepts introduced:
-    - Concept 1
-    - Concept 2
+    - Instantiating radio button controls with QRadioButton
+    - Grouping radio buttons in a named fram with QGroupBox
+    - Responding to a change of button state with a 'toggled' event
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)

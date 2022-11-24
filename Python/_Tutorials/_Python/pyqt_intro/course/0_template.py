@@ -1,5 +1,5 @@
-"""Example code from PyQt Course for Beginners tutorial (YouTube).
-
+"""Example code from the PyQt Course for Beginners tutorial (YouTube).
+------------------------------------------------------------------------
 PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=0)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
@@ -16,8 +16,7 @@ Module/Class/Methods:
     QIcon           See detailed notes (linked above)
     QFont           See detailed notes (linked above)
 
-    CLongestClassAB This show the longest line allowed by Python style conventions (99 characters)
-
+___________________________________________________________________________________________________
 
 Created November 20, 2022
 """
