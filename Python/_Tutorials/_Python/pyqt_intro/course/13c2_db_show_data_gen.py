@@ -1,4 +1,29 @@
-""" https://youtu.be/ot94H3-d5d8?t=9101 """
+"""Example code from PyQt Course for Beginners tutorial (YouTube).
+
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=9101)
+Detailed notes: https://tinyurl.com/y5db3c5c
+
+This is a placeholder file for the db_show_data code in the example.  The code is not correct.
+
+Created by converting the .ui file from Designer into a .py file using
+    pyuic6 -x <input file>.ui -o <output file>.py
+
+Concepts introduced:
+
+Module/Class/Methods:
+    QApplication    See detailed notes (linked above)
+    QWidget         See detailed notes (linked above)
+    QVBoxLayout
+    QLabel
+    QLineEdit
+    QHBoxLayout
+
+    QSplitter
+    QSpacerItem
+
+
+Created November 12, 2022
+"""
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QTableWidget,QTableWidgetItem

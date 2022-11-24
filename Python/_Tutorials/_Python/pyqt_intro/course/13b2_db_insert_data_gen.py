@@ -1,15 +1,14 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=7796)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=8570)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
-This is a placeholder file for the datbase_con code in the example.  The code is not correct.
+This is a placeholder file for the insert_data code in the example.  The code is not correct.
 
 Created by converting the .ui file from Designer into a .py file using
     pyuic6 -x <input file>.ui -o <output file>.py
 
 Concepts introduced:
-    - Adding signals and slots (via code)
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -25,6 +24,9 @@ Module/Class/Methods:
 
 Created November 12, 2022
 """
+
+
+# https://youtu.be/ot94H3-d5d8?t=8570
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 
