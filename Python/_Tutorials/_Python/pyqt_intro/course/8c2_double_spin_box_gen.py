@@ -14,19 +14,19 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(483, 300)
         Form.setStyleSheet("QWidget {\n"
-"background-color:\"green\"\n"
-"}\n"
-"QLabel {\n"
-"color:\"white\"\n"
-"}\n"
-"\n"
-"QLineEdit {\n"
-"color:\"White\"\n"
-"}\n"
-"\n"
-"QDoubleSpinBox {\n"
-"color:\"white\"\n"
-"}")
+            "background-color:\"green\"\n"
+            "}\n"
+            "QLabel {\n"
+                "color:\"white\"\n"
+            "}\n"
+            "\n"
+            "QLineEdit {\n"
+                "color:\"White\"\n"
+            "}\n"
+            "\n"
+            "QDoubleSpinBox {\n"
+                "color:\"white\"\n"
+            "}")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
