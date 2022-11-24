@@ -31,30 +31,29 @@ class Window(QWidget):
       self.setWindowIcon(QIcon("app_icon.png"))
       self.setGeometry(500, 200, 500, 400)
 
-      self.create_checkbox()
+      self.create_widgets()
 
-
-    def create_checkbox(self):
+    def create_widgets(self):
       hbox = QHBoxLayout()
 
       self.check1 = QCheckBox("Python")
-      self.setFont(QFont("Times New Roman", 14))
-      self.check1.toggled.connect(self.item_selected)
+      self.check1.setFont(QFont("Times New Roman", 14))
+      self.check1.toggled.connect(self.on_toggled)
       hbox.addWidget(self.check1)
 
       self.check2 = QCheckBox("Java")
-      self.setFont(QFont("Times New Roman", 14))
-      self.check2.toggled.connect(self.item_selected)
+      self.check2.setFont(QFont("Times New Roman", 14))
+      self.check2.toggled.connect(self.on_toggled)
       hbox.addWidget(self.check2)
 
       self.check3 = QCheckBox("C#")
-      self.setFont(QFont("Times New Roman", 14))
-      self.check3.toggled.connect(self.item_selected)
+      self.check3.setFont(QFont("Times New Roman", 14))
+      self.check3.toggled.connect(self.on_toggled)
       hbox.addWidget(self.check3)
 
       self.check4 = QCheckBox("C++")
-      self.setFont(QFont("Times New Roman", 14))
-      self.check4.toggled.connect(self.item_selected)
+      self.check4.setFont(QFont("Times New Roman", 14))
+      self.check4.toggled.connect(self.on_toggled)
       hbox.addWidget(self.check4)
 
       vbox = QVBoxLayout()
@@ -68,7 +67,7 @@ class Window(QWidget):
 
       self.setLayout(vbox)
 
-    def item_selected(self):
+    def on_toggled(self):
       value = ""
 
       if self.check1.isChecked():
