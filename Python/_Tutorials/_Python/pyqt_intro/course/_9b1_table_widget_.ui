@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- https://youtu.be/ot94H3-d5d8?t=5806 -->
+<!--
+  Output from the Qt Designer
+  PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=5807)
+  Detailed notes: https://tinyurl.com/y5db3c5c
+
+  Related to:
+    - table_widget.py
+    - table_widget_gen.py
+
+  Concepts Introduced:
+    - Launching Qt Designer with: qt6-tools designer
+    - Instantiating a table control
+
+-->
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">

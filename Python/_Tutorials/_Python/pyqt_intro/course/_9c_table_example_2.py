@@ -1,5 +1,31 @@
+"""Example code from the PyQt tutorial at https://tinyurl.com/4st2u3yp.
+------------------------------------------------------------------------
+Demonstrates creating a table in PyQt using a QTableWidget
+This example is _not_ part of the PyQt Course for Beginners tutorial.
+
+Concepts introduced:
+    - Concept 1
+    - Concept 2
+
+Module/Class/Methods:
+    QApplication                    
+    QWidget                         
+    QVBoxLayout
+
+    QTableWidget
+      setColumnCount
+      setRowCount
+      setHorizontalHeaderLabels
+      setItem
+
+    QTableWidgetItem
+
+___________________________________________________________________________________________________
+
+Created November 20, 2022
+"""
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget,QPushButton, QHBoxLayout, QVBoxLayout
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt6.QtWidgets import QLineEdit
 from PyQt6.QtWidgets import QTableWidget,QTableWidgetItem
 class YuTextFrame(QWidget):
