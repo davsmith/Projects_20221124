@@ -1,6 +1,6 @@
 """Example code from PyQt Course for Beginners tutorial (YouTube).
 
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=1326)
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=3820)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
 Example implementation of a set of checkboxes using PyQt
@@ -23,16 +23,7 @@ class Window(QWidget):
       """Extends the init function on the QWidget class.
 
       Sets up the application window, setting up icons, dimensions, etc.
-
-      Args:
-        none
-
-      Returns:
-        none
-
-      Raises:
-        none
-    """
+      """
       super().__init__()
 
       # Set window attributes
