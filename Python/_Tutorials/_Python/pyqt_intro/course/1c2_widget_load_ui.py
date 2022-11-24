@@ -45,7 +45,7 @@ class UI(QWidget):
 
       script_path = realpath(dirname(__file__))
       app_icon = QIcon(join(script_path, "images/app_icon.png"))
-      app_ui = join(script_path, "_1c_widget.ui")
+      app_ui = join(script_path, "1c1_widget.ui")
 
       uic.loadUi(app_ui, self)
       self.setWindowIcon(app_icon)

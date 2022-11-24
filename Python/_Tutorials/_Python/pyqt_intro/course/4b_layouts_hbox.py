@@ -44,7 +44,7 @@ class Window(QWidget):
       app_icon = QIcon(join(script_path, "images/app_icon.png"))
 
       # Set window appearance/attributes
-      self.setWindowTitle("PyQt6 <template>")
+      self.setWindowTitle("PyQt6 Layouts (QHBoxLayout)")
       self.setWindowIcon(app_icon)
       self.setGeometry(500, 300, 400, 300)
 
