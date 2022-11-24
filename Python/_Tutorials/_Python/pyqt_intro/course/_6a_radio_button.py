@@ -7,8 +7,9 @@ Demonstrates radio button controls (QRadioButton)
 
 Concepts introduced:
     - Instantiating radio button controls with QRadioButton
-    - Grouping radio buttons in a named fram with QGroupBox
+    - Grouping radio buttons in a named frame with QGroupBox
     - Responding to a change of button state with a 'toggled' event
+    - Using the sender method to determine which control fire an event
 
 Module/Class/Methods:
     QApplication    See detailed notes (linked above)
@@ -70,7 +71,6 @@ class Window(QWidget):
       hbox = QHBoxLayout()
       self.rad1 = QRadioButton("Python")
       self.rad1.setFont(QFont("Times New Roman", 14))
-      self.setFont(QFont("Times New Roman", 14))
       self.rad1.toggled.connect(self.on_toggled)
       hbox.addWidget(self.rad1)
 
