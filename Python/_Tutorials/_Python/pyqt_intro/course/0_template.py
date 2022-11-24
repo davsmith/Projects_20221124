@@ -35,11 +35,7 @@ class Window(QWidget):
     """
 
     def __init__(self):
-      """This method multiplies the given two numbers.
-  
-      Input Arguments: a, b must be numbers.
-      Returns: Multiplication of a and b.
-      """
+      """This method sets the window appearance."""
       super().__init__()
 
       script_path = realpath(dirname(__file__))

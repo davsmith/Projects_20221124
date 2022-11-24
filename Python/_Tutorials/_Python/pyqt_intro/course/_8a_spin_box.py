@@ -1,68 +1,82 @@
-"""Example code from PyQt Course for Beginners tutorial (YouTube).
-
-PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=410)
+"""Example code from the PyQt Course for Beginners tutorial (YouTube).
+------------------------------------------------------------------------
+PyQt6 Course for Beginners - Parwiz Forogh (https://youtu.be/ot94H3-d5d8?t=4681)
 Detailed notes: https://tinyurl.com/y5db3c5c
 
-Minimal PyQt app to demonstrate use of the SpinBox control
+Demonstrates instantiation and use of a SpinBox control
 
 Concepts introduced:
+    - Use of QSpinBox
 
-Created November 19, 2022
+Module/Class/Methods:
+    QApplication    See detailed notes (linked above)
+    QWidget         See detailed notes (linked above)
+    QLabel          See detailed notes (linked above)
+    QIcon           See detailed notes (linked above)
+    QFont           See detailed notes (linked above)
+    QHBoxLayout     See detailed notes (linked above)
+
+    QSpinBox        Creates a spinner control with integer values (also see QDoubleSpinBox)
+
+___________________________________________________________________________________________________
+
+Created November 20, 2022
 """
 
-' Minimal PyQt6 window with no icon or title, using classes '
-from PyQt6.QtWidgets import QApplication, QWidget, QTableWidget, QHBoxLayout, QTableWidgetItem, QVBoxLayout
-from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication, QWidget, QSpinBox, QLineEdit, QLabel, QHBoxLayout
+from PyQt6.QtGui import QIcon, QFont
+from os.path import join, realpath, dirname
 import sys
 
 class Window(QWidget):
-    """Basic app window class extending the QWidget base class from PyQT.
-
-    Longer class information...
-    Longer class information...
-
-    Attributes:
-      none
+    """Single line summary of the class with a period at the end.
+ 
+    Methods:
+        __init__(self, arg1, arg2)
+        method2()
     """
+
     def __init__(self):
       """Extends the init function on the QWidget class.
 
       Sets up the application window, setting up icons, dimensions, etc.
-
-      Args:
-        none
-
-      Returns:
-        none
-
-      Raises:
-        none
-    """
+      """
       super().__init__()
 
-      # Set title and appearance of the app
-      self.setWindowTitle("PyQt6 TableWidget")
-      self.setWindowIcon(QIcon("app_icon.png"))
-      self.setGeometry(500, 200, 500, 400)
-      
-      vbox = QVBoxLayout()
+      script_path = realpath(dirname(__file__))
+      app_icon = QIcon(join(script_path, "images/app_icon.png"))
 
-      tableWidget = QTableWidget()
-      tableWidget.setRowCount = 3
-      tableWidget.setColumnCount = 3
+      # Set window attributes
+      self.setWindowTitle("PyQt6 SpinBox (QSpinBox)")
+      self.setWindowIcon(app_icon)
+      self.setGeometry(500, 300, 500, 400)
 
-      tableWidget.setItem(0, 0, QTableWidgetItem("FName"))
-      tableWidget.setItem(0, 1, QTableWidgetItem("LName"))
-      tableWidget.setItem(0, 2, QTableWidgetItem("Email"))
+      self.create_widgets()
 
-      tableWidget.setItem(1, 0, QTableWidgetItem("Parwiz"))
-      tableWidget.setItem(1, 1, QTableWidgetItem("Forogh"))
-      tableWidget.setItem(1, 2, QTableWidgetItem("parwiz@gmail.com"))
+    def create_widgets(self):
+      """Creates the controls for this example"""
+      hbox = QHBoxLayout()
 
-      vbox.addWidget(tableWidget)
-      self.setLayout(vbox)
-      self.setGeometry(20,20,200,200)
-      # self.setStyleSheet("background-color:blue")
+      self.line_edit = QLineEdit()
+      label = QLabel("Laptop price: ")
+      self.spinbox = QSpinBox()
+      self.spinbox.valueChanged.connect(self.on_value_changed)
+
+      self.result = QLineEdit()
+
+      hbox.addWidget(label)
+      hbox.addWidget(self.line_edit)
+      hbox.addWidget(self.spinbox)
+      hbox.addWidget(self.result)
+
+      self.setLayout(hbox)
+
+    def on_value_changed(self):
+      if self.line_edit.text() != 0:
+        price = int(self.line_edit.text())
+
+        total_price = self.spinbox.value() * price
+        self.result.setText(str(total_price))
 
 
 # *** Main ***
