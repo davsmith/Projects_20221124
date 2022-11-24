@@ -21,7 +21,7 @@ ________________________________________________________________________________
 Created November 20, 2022
 """
 
-from PyQt6.QtWidgets import QApplication, QWidget, QLabel
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton
 from PyQt6.QtGui import QIcon, QFont
 from os.path import join, realpath, dirname
 import sys
@@ -57,7 +57,7 @@ class Window(QWidget):
       """
 
       # Create a widget for something, set some attributes
-      widget1 = QWidget("Click Me", self)
+      widget1 = QPushButton("Click Me", self)
 
       # widget1.move(100,100)
       widget1.setGeometry(100, 100, 100, 100)
